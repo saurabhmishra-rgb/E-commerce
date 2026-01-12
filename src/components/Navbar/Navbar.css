@@ -201,23 +201,37 @@
   }
 }
 
-/* Small Tablet / Large Mobile */
+/* Desktop/Laptop view - Logo on the left */
+@media screen and (min-width: 769px) {
+  .logo-container {
+    position: static;
+    transform: none;
+    order: initial;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+}
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 10px 15px;
     justify-content: space-between;
+    position: relative;
   }
   .navbar .logo {
     width: 100px;
   }
   .logo-container {
-    position: static;
-    transform: none;
-    order: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    order: initial;
   }
   .hamburger {
     display: flex;
     order: 1;
+    position: relative;
+    z-index: 101;
   }
   .navbar-menu {
     position: absolute;
@@ -274,14 +288,16 @@
 @media screen and (max-width: 640px) {
   .navbar {
     padding: 12px 15px;
+    position: relative;
   }
   .navbar .logo {
     width: 90px;
   }
   .logo-container {
-    position: static;
-    transform: none;
-    order: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    order: initial;
   }
   .hamburger {
     display: flex;
@@ -347,19 +363,23 @@
   .navbar {
     padding: 10px 12px;
     gap: 8px;
+    position: relative;
   }
   .navbar .logo {
     width: 80px;
   }
   .logo-container {
-    position: static;
-    transform: none;
-    order: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    order: initial;
   }
   .hamburger {
     display: flex;
     order: 1;
     padding: 8px;
+    position: relative;
+    z-index: 101;
   }
   .bar {
     width: 22px;
@@ -432,12 +452,21 @@
   .navbar {
     padding: 8px 10px;
     gap: 6px;
+    position: relative;
   }
   .navbar .logo {
     width: 70px;
   }
+  .logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    order: initial;
+  }
   .hamburger {
     padding: 6px;
+    position: relative;
+    z-index: 101;
   }
   .bar {
     width: 20px;
