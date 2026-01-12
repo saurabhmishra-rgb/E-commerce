@@ -101,16 +101,6 @@ const Navbar = ({ setShowLogin }) => {
 
         <button onClick={() => setShowLogin(true)}>sign in</button>
       </div>
-
-
-      {/* Example static image from public/images */}
-      <div className="navbar-banner">
-        <img
-          src="/e-commerce_website/images/banner.jpg"
-          alt=""
-          className="banner"
-        />
-      </div>
     </div>
   );
 };
