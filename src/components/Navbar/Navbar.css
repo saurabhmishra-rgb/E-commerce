@@ -12,6 +12,11 @@
 .navbar .logo{
     width: 150px;
 }
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .navbar-menu{
    display: flex;
    list-style: none;
@@ -114,6 +119,10 @@
   .navbar .logo {
     width: 100px;
   }
+  .logo-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .navbar-menu {
     position: absolute;
     top: 100%;
@@ -166,6 +175,10 @@
   }
   .navbar .logo {
     width: 70px;
+  }
+  .logo-container {
+    left: 50%;
+    transform: translateX(-50%);
   }
   .navbar-menu {
     position: absolute;

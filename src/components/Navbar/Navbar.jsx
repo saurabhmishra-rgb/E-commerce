@@ -20,17 +20,17 @@ const Navbar = ({ setShowLogin }) => {
 
   return (
     <div className="navbar">
-      {/* Logo from src/assets */}
-      <Link to="/" onClick={closeMenu}>
-        <img src={logo} alt="logo" className="logo" />
-      </Link>
-
-      {/* Hamburger Menu Icon */}
+      {/* Hamburger Menu Icon - Top Left */}
       <div className="hamburger" onClick={toggleMenu}>
         <span className={isMenuOpen ? "bar open" : "bar"}></span>
         <span className={isMenuOpen ? "bar open" : "bar"}></span>
         <span className={isMenuOpen ? "bar open" : "bar"}></span>
       </div>
+
+      {/* Logo from src/assets - Centered */}
+      <Link to="/" onClick={closeMenu} className="logo-container">
+        <img src={logo} alt="logo" className="logo" />
+      </Link>
 
       {/* Navbar Menu */}
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
