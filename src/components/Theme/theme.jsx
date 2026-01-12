@@ -1,20 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Theme = ({ children }) => {
   const [dark, setDark] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Check if device is mobile
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   return (
     <div
@@ -25,22 +12,22 @@ const Theme = ({ children }) => {
         transition: "0.4s ease",
       }}
     >
-      {/* Toggle Button - Mobile Responsive */}
+      {/* Toggle Button - Top Right Corner */}
       <div
         onClick={() => setDark(!dark)}
         style={{
-          width: isMobile ? "50px" : "60px",
-          height: isMobile ? "25px" : "30px",
+          width: "60px",
+          height: "30px",
           borderRadius: "30px",
           background: dark ? "#444" : "#ddd",
           display: "flex",
           alignItems: "center",
           justifyContent: dark ? "flex-end" : "flex-start",
-          padding: "3px",
+          padding: "5px",
           cursor: "pointer",
           position: "fixed",
-          top: isMobile ? "60px" : "20px", // Position below navbar on mobile
-          right: isMobile ? "10px" : "20px",
+          top: "20px",
+          right: "20px",
           zIndex: "1000",
           boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
           transition: "0.3s ease",
@@ -50,15 +37,15 @@ const Theme = ({ children }) => {
       >
         <div
           style={{
-            width: isMobile ? "18px" : "22px",
-            height: isMobile ? "18px" : "22px",
+            width: "22px",
+            height: "22px",
             borderRadius: "50%",
             background: dark ? "#fff" : "#333",
             transition: "0.3s ease",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: isMobile ? "10px" : "12px",
+            fontSize: "12px",
             boxShadow: "0 1px 3px rgba(0,0,0,0.3)",
           }}
         >
