@@ -8,47 +8,78 @@ import searchIcon from "../../assets/search_icon.png";
 import basketIcon from "../../assets/basket_icon.png";
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = React.useState("home");
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <div className="navbar">
       {/* Logo from src/assets */}
-      <Link to="/">
+      <Link to="/" onClick={closeMenu}>
         <img src={logo} alt="logo" className="logo" />
       </Link>
 
+      {/* Hamburger Menu Icon */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <span className={isMenuOpen ? "bar open" : "bar"}></span>
+        <span className={isMenuOpen ? "bar open" : "bar"}></span>
+        <span className={isMenuOpen ? "bar open" : "bar"}></span>
+      </div>
+
       {/* Navbar Menu */}
-      <ul className="navbar-menu">
+      <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <Link
           to="/"
-          onClick={() => setMenu("home")}
+          onClick={() => {
+            setMenu("home");
+            closeMenu();
+          }}
           className={menu === "home" ? "active" : ""}
         >
           home
         </Link>
         <a
           href="#explore-menu"
-          onClick={() => setMenu("menu")}
+          onClick={() => {
+            setMenu("menu");
+            closeMenu();
+          }}
           className={menu === "menu" ? "active" : ""}
         >
           menu
         </a>
         <a
           href="#app-download"
-          onClick={() => setMenu("mobile-app")}
+          onClick={() => {
+            setMenu("mobile-app");
+            closeMenu();
+          }}
           className={menu === "mobile-app" ? "active" : ""}
         >
           mobile-app
         </a>
         <Link
           to="/services"
-          onClick={() => setMenu("services")}
+          onClick={() => {
+            setMenu("services");
+            closeMenu();
+          }}
           className={menu === "services" ? "active" : ""}
         >
           services
         </Link>
         <a
           href="#footer"
-          onClick={() => setMenu("contact-us")}
+          onClick={() => {
+            setMenu("contact-us");
+            closeMenu();
+          }}
           className={menu === "contact-us" ? "active" : ""}
         >
           contact-us
@@ -62,7 +93,7 @@ const Navbar = ({ setShowLogin }) => {
 
         <div className="navbar-search-icon">
           {/* Basket icon (src/assets) */}
-          <Link to="/cart">
+          <Link to="/cart" onClick={closeMenu}>
             <img src={basketIcon} alt="basket" />
           </Link>
           <div className="dot"></div>
@@ -70,7 +101,7 @@ const Navbar = ({ setShowLogin }) => {
 
         <button onClick={() => setShowLogin(true)}>sign in</button>
       </div>
-     
+
 
       {/* Example static image from public/images */}
       <div className="navbar-banner">

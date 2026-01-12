@@ -10,14 +10,14 @@
   z-index: 100;
 }
 .navbar .logo{
-    width: 150px;  
+    width: 150px;
 }
 .navbar-menu{
    display: flex;
    list-style: none;
    gap: 20px;
    color: #49557e;
-   font-size: 18px; 
+   font-size: 18px;
 
 }
 .navbar-right{
@@ -25,6 +25,36 @@
     align-items: center;
     gap: 40px;
 }
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  padding: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #49557e;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
 .navbar button{
    background: transparent;
    font-size: 16px;
@@ -85,8 +115,34 @@
     width: 100px;
   }
   .navbar-menu {
-    gap: 10px;
-    font-size: 14px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+  .navbar-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .navbar-menu a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(73, 85, 126, 0.1);
+  }
+  .hamburger {
+    display: flex;
   }
   .navbar-right {
     gap: 12px;
@@ -112,8 +168,39 @@
     width: 70px;
   }
   .navbar-menu {
-    gap: 8px;
-    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+  }
+  .navbar-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .navbar-menu a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(73, 85, 126, 0.1);
+    font-size: 16px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .bar {
+    width: 20px;
+    height: 2px;
   }
   .navbar-right {
     gap: 8px;
