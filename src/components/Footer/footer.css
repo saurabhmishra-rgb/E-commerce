@@ -54,3 +54,40 @@
         text-align: center;
     }
 }
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 4vw;
+    padding-top: 60px;
+  }
+  .footer-content {
+    gap: 40px;
+  }
+  .footer-content-left, .footer-content-right, .footer-content-center {
+    gap: 15px;
+  }
+  .footer-social-icons img {
+    width: 30px;
+    margin-right: 10px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .footer {
+    padding: 15px 2vw;
+    padding-top: 40px;
+    gap: 15px;
+  }
+  .footer-content {
+    gap: 30px;
+  }
+  .footer-content-left, .footer-content-right, .footer-content-center {
+    gap: 10px;
+  }
+  .footer-social-icons img {
+    width: 25px;
+    margin-right: 8px;
+  }
+}

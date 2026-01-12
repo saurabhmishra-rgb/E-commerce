@@ -101,24 +101,32 @@
   .navbar {
     flex-wrap: nowrap;
     gap: 5px;
+    padding: 10px 5px;
   }
   .navbar .logo {
-    width: 80px;
+    width: 70px;
   }
   .navbar-menu {
-    gap: 6px;
+    gap: 8px;
     font-size: 12px;
   }
   .navbar-right {
-    gap: 6px;
+    gap: 8px;
   }
   .navbar-right img {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
   .navbar button {
-    padding: 4px 8px;
+    padding: 8px 12px;
     font-size: 12px;
+    min-height: 36px;
+  }
+  .navbar li {
+    padding: 8px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
   }
 }
 

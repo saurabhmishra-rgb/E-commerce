@@ -56,3 +56,40 @@
 
     }
 }
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .explore-menu {
+    gap: 15px;
+  }
+  .explore-menu h1 {
+    font-size: 1.5rem;
+  }
+  .explore-menu-text {
+    max-width: 100%;
+  }
+  .explore-menu-list {
+    gap: 20px;
+  }
+  .explore-menu-list-item img {
+    width: 60px;
+    min-width: 60px;
+  }
+  .explore-menu-list-item p {
+    font-size: 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .explore-menu-list {
+    gap: 15px;
+  }
+  .explore-menu-list-item img {
+    width: 50px;
+    min-width: 50px;
+  }
+  .explore-menu-list-item p {
+    font-size: 12px;
+  }
+}

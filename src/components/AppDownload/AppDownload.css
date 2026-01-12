@@ -21,3 +21,31 @@
 .app-download-plateform img:hover{
   transform: scale(1.05);
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .app-download {
+    margin-top: 80px;
+    font-size: 1.5rem;
+  }
+  .app-download-plateform {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .app-download-plateform img {
+    width: 200px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-download {
+    font-size: 1.2rem;
+  }
+  .app-download-plateform img {
+    width: 150px;
+    max-width: 150px;
+  }
+}

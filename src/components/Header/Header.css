@@ -18,7 +18,7 @@
 }
 .header-content h2{
     font-weight: 500;
-    color: white;
+    color: rgb(233, 233, 233);
     font-size: max(4.5vw,22px);
 }
 .header-content p{

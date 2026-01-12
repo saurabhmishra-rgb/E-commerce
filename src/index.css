@@ -17,6 +17,45 @@ a{
   width: 80%;
   margin: auto;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  /* Ensure proper touch scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Improve button touch targets */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app {
+    width: 85%;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  .app {
+    width: 98%;
+    padding: 0 5px;
+  }
+  
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;

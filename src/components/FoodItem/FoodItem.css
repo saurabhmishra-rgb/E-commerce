@@ -63,3 +63,49 @@
 .Medusa:hover {
   transform: scale(1.15);
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .food-container {
+    padding: 20px 10px;
+  }
+  .food-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  .food-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  .food-card {
+    padding: 10px;
+  }
+  .food-image {
+    height: 120px;
+  }
+  .food-name {
+    font-size: 1rem;
+  }
+  .food-price {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+  .food-card {
+    padding: 8px;
+  }
+  .food-image {
+    height: 100px;
+  }
+  .food-name {
+    font-size: 0.9rem;
+  }
+  .food-price {
+    font-size: 0.8rem;
+  }
+}

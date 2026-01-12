@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import searchIcon from "../../assets/search_icon.png";
 import basketIcon from "../../assets/basket_icon.png";
-
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = React.useState("home");
 
@@ -40,6 +39,13 @@ const Navbar = ({ setShowLogin }) => {
         >
           mobile-app
         </a>
+        <Link
+          to="/services"
+          onClick={() => setMenu("services")}
+          className={menu === "services" ? "active" : ""}
+        >
+          services
+        </Link>
         <a
           href="#footer"
           onClick={() => setMenu("contact-us")}
@@ -64,6 +70,7 @@ const Navbar = ({ setShowLogin }) => {
 
         <button onClick={() => setShowLogin(true)}>sign in</button>
       </div>
+     
 
       {/* Example static image from public/images */}
       <div className="navbar-banner">

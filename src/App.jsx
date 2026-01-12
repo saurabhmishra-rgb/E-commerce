@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/pages/Home/Home.jsx';
 import Cart from './components/pages/Cart/Cart.jsx';
 import PlaceOrder from './components/pages/PlaceOrder/PlaceOrder.jsx';
+import Services from './components/Services/Services.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Login from './components/Login/Login.jsx';
 import Salad from './components/ourMenu/salad.jsx';
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/order' element={<PlaceOrder />} />
+        <Route path='/services' element={<Services />} />
         <Route path='/salad' element={<Salad />} />
         <Route path='/rolls' element={<Rolls />} />
         <Route path='/desserts' element={<DessertsGallery />} />
